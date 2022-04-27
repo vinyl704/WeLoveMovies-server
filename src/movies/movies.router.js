@@ -1,10 +1,6 @@
 const router = require("express").Router({mergeParams:true});
 const controller = require("./movies.controller")
-const reviewRouter = require("../reviews/reviews.router")
 const methodNotAllowed = require("../errors/methodNotAllowed")
-
-
-//router.use("/:movieId/reviews",reviewRouter)
 
 router.route("/?is_showing")
 .get(controller.list)
